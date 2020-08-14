@@ -28,10 +28,11 @@ const App = () => {
   const showDetails = id => {
     setCharacterId(id)
   }
-  const hideDetails = id => {
+  const hideDetails = () => {
     setCharacterId(null)
   }
   const expandCharacter = '\u2303'
+  const closeCharacter = '\u2304'
   
 
   return (
@@ -39,8 +40,7 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       {
         characters.map((character, id) => {
-        return <Character 
-            key={character.id} 
+        return <Character  key={id} 
             character={character}
             action= {showDetails}
             expandCharacter = {expandCharacter}
@@ -49,7 +49,7 @@ const App = () => {
         })
       }
       {
-        characterId && <Details characterId = {characterId} close={hideDetails} />
+       characterId && <Details characterId = {characterId} close={hideDetails} />
       }
     </div>
   );

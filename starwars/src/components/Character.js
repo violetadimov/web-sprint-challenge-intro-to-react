@@ -8,12 +8,13 @@ import React from "react";
 //`
 function Character(props) {
     const { character, action, expandCharacter } = props
-    const closeCharacter = '\u2304'
+    console.log(character)
 
     return (
-        <div className='character-container'>
+        <div className='character-container' >
             {character.name}
-            <button className='expandButton' onClick={() => action(character.id) }>{expandCharacter}</button>
+            <button className='expandButton'  onClick={() => action(character.height) }>{expandCharacter}</button>
+            
         </div>
     )
 }
