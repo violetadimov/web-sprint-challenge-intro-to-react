@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Character from './components/Character'
-import Details from './components/Details'
+//import Details from './components/Details'
 import axios from 'axios'
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
   const [characters, setCharacters] = useState([])
-  const [characterId, setCharacterId] = useState(null)
+  //const [star, setCharacterId] = useState(null)
   
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
@@ -25,14 +25,14 @@ const App = () => {
         console.log(error)
       })
   }, [])
-  const showDetails = id => {
-    setCharacterId(id)
-  }
-  const hideDetails = () => {
-    setCharacterId(null)
-  }
-  const expandCharacter = '\u2303'
-  const closeCharacter = '\u2304'
+  // const showDetails = id => {
+  //   setCharacterId(id)
+  // }
+  // const hideDetails = () => {
+  //   setCharacterId(null)
+  // }
+  // const expandCharacter = '\u2303'
+  // const closeCharacter = '\u2304'
   
 
   return (
@@ -42,14 +42,11 @@ const App = () => {
         characters.map((character, id) => {
         return <Character  key={id} 
             character={character}
-            action= {showDetails}
-            expandCharacter = {expandCharacter}
+            // action= {showDetails}
+            // expandCharacter = {expandCharacter}
 
         />
         })
-      }
-      {
-       characterId && <Details characterId = {characterId} close={hideDetails} />
       }
     </div>
   );

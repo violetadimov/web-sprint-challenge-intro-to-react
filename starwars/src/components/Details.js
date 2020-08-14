@@ -8,31 +8,8 @@ import axios from 'axios'
 //`
 function Details(props) {
     const { characterId, close } = props
-    const [characterDetails, setCharacterDetails] = useState(null)
-    const closeCharacter = '\u2304'
-    const charactersUrl = `https://swapi.dev/api/people/`
-
-    function fetchPerson(id) {
-        axios.get(`https://swapi.dev/api/people/${id}`)
-        .then(value => {
-            setInterval(() => {
-                setCharacterDetails(value.data)
-            }, 3000)
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
-    useEffect(() => {
-        
-            for (var i = 1; i <= 10; i++) {
-                
-                
-                fetchPerson(i)
-               
-            }
-        
-    }, [] )
+    const [details, setDetails] = useState(null)
+    
   
 
     return (
