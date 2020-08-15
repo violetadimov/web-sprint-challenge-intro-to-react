@@ -12,13 +12,17 @@ const StyleCharacter = styled.div`
     color: ${props => props.color || props.theme.primaryColor};
     margin: ${props => props.theme.margins.small};
     font-size: '1em';
+    border-radius: 20px;
 
     h1{
+        width: 40%;
         font-size: '1.5em';
     }
     .details{
-        width: 80%;
-        background-color: white
+        width: 60%;
+        background-color: white;
+        border-radius: 0 20px 20px 0;
+
     }
     @media (max-width: ${props => props.theme.tabletBreakpoint}) {
     width: 100%;
