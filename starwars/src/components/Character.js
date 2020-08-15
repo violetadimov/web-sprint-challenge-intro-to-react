@@ -37,15 +37,15 @@ function Character(props) {
         <StyleCharacter className='character-container' >
             <h1>{character.name}</h1>
             <div className='details'>
+                <p>Gender: {character.gender}</p>
+                <p>Eye Color : {character.eye_color} </p>
+                <p>Hair Color: {character.hair_color} </p>
+                <p>Skin Color: {character.skin_color} </p>
                 <p> Height: {character.height}</p>
                 <p>Birth Year: {character.birth_year}</p>
-                <p>Home World : {character.homeworld}</p>
-                starships:
-                <ul>
-                    {
-                        character.starships.map((starship, index) => <li key={index}>{starship}</li>)
-                    }
-                </ul>
+
+                
+                
             </div>
             
             

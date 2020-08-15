@@ -10,7 +10,12 @@ function Details(props) {
     const { characterId, close } = props
     const [details, setDetails] = useState(null)
     
-  
+    starships:
+    <ul>
+        {
+            character.starships.map((starship, index) => <li key={index}>{starship}</li>)
+        }
+    </ul>
 
     return (
         <div className='character-details' >
